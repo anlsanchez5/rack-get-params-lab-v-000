@@ -36,4 +36,8 @@ class Application
       return "Couldn't find #{search_term}"
     end
   end
+
+  def cart_empty
+    @@cart.empty?
+  end
 end
