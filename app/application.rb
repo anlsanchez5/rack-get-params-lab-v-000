@@ -40,7 +40,7 @@ class Application
     if @@items.include?(search_term)
       item = @@items.detect {|i| i == search_term}
       @@cart << item
-    else 
+    else
       return "Couldn't find #{search_term}"
     end
   end
