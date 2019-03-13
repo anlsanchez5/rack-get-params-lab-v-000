@@ -47,7 +47,7 @@ class Application
   def cart_search
     if @@cart.empty? == false
       @@cart.each do |item|
-      resp.write "#{item}\n"
+      puts "#{item}\n"
       end
     else
       return "Your cart is empty."
