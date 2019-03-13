@@ -36,6 +36,15 @@ class Application
     end
   end
 
+  def item_search(search_term)
+    if @@items.include?(search_term)
+      item = @@items.detect {|i| i == search_term}
+      @@cart << item
+    else 
+      return "Couldn't find #{search_term}"
+    end
+  end
+
   def cart_search
     if @@cart.empty? == false
       @@cart.each do |item|
