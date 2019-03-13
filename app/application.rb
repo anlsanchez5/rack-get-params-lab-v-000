@@ -18,8 +18,7 @@ class Application
       resp.write cart_search
     elsif req.path.match(/add/)
       search_term = req.params["item"]
-      resp.write handle_search(search_term)
-      @@cart << search_term
+      resp.write item_search(search_term)
     else
       resp.write "Path Not Found"
     end
