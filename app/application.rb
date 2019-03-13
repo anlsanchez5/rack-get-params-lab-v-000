@@ -44,7 +44,8 @@ class Application
   def item_search(search_term)
     if @@items.include?(search_term)
       item = @@items.detect {|i| i == search_term}
-      @@cart << "added #{item}"
+      @@cart << item
+      return "added #{item}"
     else
       return "We don't have that item"
     end
